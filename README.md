@@ -2,7 +2,7 @@
 ## Flask
     It is microframework and doesn't have a lot of overhead, Flask is very performant. Extensions could impact performance negatively.
     Very flexible
-    ORM used in current api is mongoengine
+    ORM used in current api is pymongo
     Flask documentation is comprehensive, full of examples and well structured.
     It is super easy to deploy Flask in production
     High Flexibility
