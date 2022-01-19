@@ -2,6 +2,7 @@ import glob
 import pymongo
 import os
 import time
+import zipfile
 from flask import Flask,request
 from datapreprocess import download_url,extract_zip,get_predata
 
@@ -32,9 +33,9 @@ def fun_data():
     url = request.args.get("url")
     if not os.path.exists("test_patent.zip"):
            download_url(url,"test_patent.zip")
-    time.sleep(3)
-    if not os.path.isdir("test_patents"):
-      extract_zip("test_patent.zip","test_patents")
+    if zipfile.is_zipfile("test_patent.zip") 
+      if not os.path.isdir("test_patents"):
+            extract_zip("test_patent.zip","test_patents")
     total_file_lists = []
     total_data = []
     for name in glob.glob('{}/*.xml'.format("test_patents")):
