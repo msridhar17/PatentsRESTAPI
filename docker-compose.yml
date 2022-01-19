@@ -9,7 +9,7 @@ services:
     links:
        - "mongodb:database"
     volumes:
-      - ./:/watchapp
+      - ./:/patentsapp
 
   mongodb:
     image: mongo:4.0.8
